@@ -1,0 +1,41 @@
+<!--
+ Copyright (c) 2022 Evolving Software Corporation
+ 
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+
+{{! Handlebars template that accepts a home input }}
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8' />
+		<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		<title>{{title}}</title>
+	</head>
+	<body>
+
+		{{! Main content }}
+		<div class='row'>
+			<div class='col-md-12'>
+				<div class='card'>
+					<div class='card-header'>
+						<h4 class='card-title'>{{title}}</h4>
+					</div>
+					<div class='card-body'>
+						<p>
+							Welcome to the Evolving Software Corporation website.
+						</p>
+						<p>
+							Please use the links in the menu to navigate to the various sections of the website.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{{! End main content }}
+
+		{{! End template }}
+	</body>
+</html>
