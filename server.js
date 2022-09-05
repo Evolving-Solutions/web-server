@@ -15,7 +15,9 @@ import pageRoute from './pages/page.route';
 
 const app = express();
 //mongodb connection
-app.use(cors());
+app.use(cors({
+    origin: 'https://evolvingsolutions.io'
+}));
 app.use(express.json());
 app.use('/resources', express.static(path.join(__dirname, '../public')));
 app.use('views', express.static(path.join(__dirname, 'views')));
