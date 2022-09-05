@@ -8,8 +8,17 @@ import { createPage, deletePage, listPages, pageDetails, savePageContent, update
 export const create = async (req, res) => {
     const pageBody = req.body;
     const page = await createPage(pageBody);
-    res.json(page);
-}
+    // check the page to see if it was created or it the page itself is an error object
+    if (page) {
+        res.statusMessage = "Created";
+        res.status(200).json(page);
+    } else {
+        res.status(500).json({
+            error: "Error creating page",
+        });
+
+    }
+};
 
 export const changeContent = async (req, res) => {
     const pageId = req.params.pageId;
